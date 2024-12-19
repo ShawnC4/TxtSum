@@ -1,0 +1,15 @@
+transformers
+transformers[sentencepiece]
+datasets
+sacrebleu
+py7zr
+pandas
+nltk
+tqdm
+pyyaml
+matplotlib
+notebook
+boto3
+fastapi
+uvicorn
+Jinja2
