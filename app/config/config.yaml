@@ -2,7 +2,7 @@ artifacts_root: app/artifacts
 
 data_ingestion:
   root_dir: app/artifacts/data_ingestion
-  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip
+  source_URL: https://github.com/ShawnC4/DATA/raw/refs/heads/main/textsummarize/summarizer-data.zip
   local_data_file: app/artifacts/data_ingestion/data.zip
   unzip_dir: app/artifacts/data_ingestion
 
@@ -11,3 +11,9 @@ data_validation:
   root_dir: app/artifacts/data_validation
   STATUS_FILE: app/artifacts/data_validation/status.txt
   ALL_REQUIRED_FILES: ["train", "test", "validation"]
+
+
+data_transformation:
+   root_dir: app/artifacts/data_transformation
+   data_path: app/artifacts/data_ingestion/samsum_dataset
+   tokenizer_name: google/pegasus-cnn_dailymail
