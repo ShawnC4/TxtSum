@@ -1,13 +1,26 @@
 from src.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from src.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from src.logging import logger
 
 STAGE_NAME = "Data Ingestion Stage"
 try:
-    logger.info(f"Starting {STAGE_NAME}")
+    logger.info(f">>>>> Starting {STAGE_NAME} <<<<<")
     data_ingestion = DataIngestionTrainingPipeline()
     data_ingestion.main()
-    logger.info(f"Completed {STAGE_NAME}")
+    logger.info(f">>>>> Completed {STAGE_NAME} <<<<<\n\nx====================x")
 except Exception as e:
     logger.exception(e)
-    logger.error(f"Failed to execute {STAGE_NAME}")
+    logger.error(f">>>>> Failed to execute {STAGE_NAME} <<<<<\n\nx====================x")
+    raise e
+
+
+STAGE_NAME = "Data Validation Stage"
+try:
+    logger.info(f">>>>> Starting {STAGE_NAME} <<<<<")
+    data_validation = DataValidationTrainingPipeline()
+    data_validation.main()
+    logger.info(f">>>>> Completed {STAGE_NAME} <<<<<\n\nx====================x")
+except Exception as e:
+    logger.exception(e)
+    logger.error(f">>>>> Failed to execute {STAGE_NAME} <<<<<\n\nx====================x")
     raise e
