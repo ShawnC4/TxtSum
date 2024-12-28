@@ -13,3 +13,5 @@ boto3
 fastapi
 uvicorn
 Jinja2
+streamlit
+evaluate

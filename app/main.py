@@ -5,6 +5,7 @@ from src.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 from src.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 from src.logging import logger
 
+'''
 STAGE_NAME = "Data Ingestion Stage"
 try:
     logger.info(f">>>>> Starting {STAGE_NAME} <<<<<")
@@ -52,7 +53,7 @@ except Exception as e:
     logger.exception(e)
     logger.error(f">>>>> Failed to execute {STAGE_NAME} <<<<<\n\nx====================x")
     raise e
-
+'''
 
 STAGE_NAME = "Model Evaluation Stage"
 try:
